@@ -38,22 +38,22 @@ class CommentSerializer(serializers.ModelSerializer):
         read_only_fields = ("review",)
 
 
-class UserSerializer(serializers.ModelSerializer):
-    """
-    Сериалайзер пользователей.
-    """
-    username = serializers.CharField(
-        validators=[validate_username,
-                    UniqueValidator(queryset=User.objects.all()),
-                    UserRegexValidator]
-    )
-
-    class Meta:
-        model = User
-        fields = ('username', 'email',
-                  'first_name', 'last_name',
-                  'bio', 'role',)
-        read_only_field = ('role',)
+# class UserSerializer(serializers.ModelSerializer):
+#     """
+#     Сериалайзер пользователей.
+#     """
+#     username = serializers.CharField(
+#         validators=[validate_username,
+#                     UniqueValidator(queryset=User.objects.all()),
+#                     UserRegexValidator]
+#     )
+#
+#     class Meta:
+#         model = User
+#         fields = ('username', 'email',
+#                   'first_name', 'last_name',
+#                   'bio', 'role',)
+#         read_only_field = ('role',)
 
 
 class RegisterSerializer(serializers.Serializer):
