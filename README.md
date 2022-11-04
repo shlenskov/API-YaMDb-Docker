@@ -74,12 +74,13 @@ python manage.py runserver
 ### Шаблон наполнения env-файла:
 
 ```
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=postgres
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postress
-DB_HOST=db
-DB_PORT=5432
+DB_ENGINE
+DB_NAME
+POSTGRES_USER
+POSTGRES_PASSWORD
+DB_HOST
+DB_PORT
+
 ```
 
 ### Развертывание контейнеров и заполнение БД
