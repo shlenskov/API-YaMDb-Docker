@@ -89,31 +89,42 @@ DB_PORT
 
 Сборка и развёртывание контейнеров в «фоновом режиме»:
 
+```
 docker-compose up -d --build
+```
 
 Выполнение миграций:
 
+```
 docker-compose exec web python manage.py migrate
+```
 
 Создание суперпользователя:
 
+```
 docker-compose exec web python manage.py createsuperuser
+```
 
 Сборка статики:
 
+```
 docker-compose exec web python manage.py collectstatic --no-input
+```
 
 Зайдите на http://localhost/admin/ и убедитесь, что страница отображается полностью
 
 Создание дампа (резервную копию) базы данных:
 
+```
 docker-compose exec web python manage.py dumpdata > fixtures.json 
+```
 
 Останавка контейнеров:
 
-docker-compose down -v
-
 ```
+docker-compose down -v
+```
+
 
 ## Разработчики
 
